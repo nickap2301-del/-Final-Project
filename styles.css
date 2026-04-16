@@ -1201,7 +1201,7 @@ footer {
   }
 }
 @media (max-width: 1024px) {
-  .btn__menu {
+  .nav__links{
     display: none;
   }
 }
