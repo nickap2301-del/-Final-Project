@@ -664,7 +664,7 @@ h2 {
   flex-direction: row;
   width: 100%;
   justify-content: center;
-  gap: 24px;
+  gap: 24px;  /* adjust this value to control spacing */
 }
 
 .plan {
@@ -902,7 +902,7 @@ section {padding: 0 32px;}
   }
 }
 
-.textimonials__img .testimonials__description {
+.testimonials__img,  .testimonials__description {
   width: 50%;
 }
 
@@ -928,7 +928,7 @@ section {padding: 0 32px;}
   margin-top: 40px;
 }
 
-.textimonials__rating {
+.testimonials__rating {
   color: rgba(246, 173, 85);
   margin-right: 2px;
   margin-top: 4px;
