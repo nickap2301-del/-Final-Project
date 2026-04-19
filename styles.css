@@ -299,11 +299,23 @@ main {
 }
 
 
+.features {
+  display: flex;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.feature__row {
+  display: flex;
+  padding: 32px 24px;
+  align-items: flex-start;
+}
+
 .feature__img--wrapper {
   display: flex;
   padding: 20px;
   border: 1px solid #e5e7eb;
-  border-radius: 500px;
+  border-radius: 50px;
 }
 
 
@@ -355,10 +367,6 @@ h2 {
   display: flex;
   align-items: flex-start;
   width: calc(33.3333%);
-}
-.feature__row {
-  display: flex;
-  padding: 32px 24px;
 }
 
 
@@ -655,7 +663,8 @@ h2 {
   position: relative;
   flex-direction: row;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 24px;
 }
 
 .plan {
