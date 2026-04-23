@@ -130,7 +130,7 @@ a {
   font-weight: 700;
   font-size: 15px;
 }
-
+.nav__link--primarya:after{content:""; width:0; height: 0;}
 .nav__link--primary:hover {
   background-color: rgba(60, 13, 153);
 }
