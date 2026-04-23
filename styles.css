@@ -1136,13 +1136,6 @@ button {
   justify-content: center;
   align-items: center;
 }
-
-@media (max-width: 1024px) {
-  .start__row {
-    flex-direction: none;
-  }
-}
-
 .start__row {
   width: 100%;
   margin: 0 auto;
