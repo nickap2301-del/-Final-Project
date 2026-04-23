@@ -119,20 +119,27 @@ a {
   transition: all 300ms ease;
   opacity: 0;
 }
+
+.nav__link:hover::after{opacity: 1;}
 /*setup buttom*/
 
 .nav__link--primary {
+  margin: 0;
+  padding: 10px 32px;
+  margin-top: 2px;
+  border-radius: 9999px;
   background-color: #5843e4;
   color: white;
-  padding: 12px 28px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 700;
+  line-height: 1.5;
+  border: none;
+  font-weight: auto;
   font-size: 15px;
+  transition: all 300ms ease;
 }
-.nav__link--primarya:after{content:""; width:0; height: 0;}
+.nav__link--primary:after {content: ""; width: 0; height: 0;}
 .nav__link--primary:hover {
   background-color: rgba(60, 13, 153);
+  color:white;
 }
 
 /*header*/
@@ -296,8 +303,7 @@ main {
   font-weight: 500;
   color: rgb(124, 139, 161);
   line-height: 1.625;
-}
-
+ }
 
 .features {
   display: flex;
@@ -317,7 +323,6 @@ main {
   border: 1px solid #e5e7eb;
   border-radius: 50px;
 }
-
 
 .feature__tag {
   display: flex;
@@ -369,7 +374,6 @@ h2 {
   width: calc(33.3333%);
 }
 
-
 /* end feature */
 
 /*quality work*/
@@ -407,13 +411,20 @@ h2 {
   color: #7c8ba1;
   line-height: 1.625;
 }
-#quality .btn__menu {
+#quality .btn {
   margin-top: 32px;
 }
 
 .btn__menu:hover {
   background-color: rgb(80, 17, 204);
 }
+/*  */
+@media (max-width: 1024px) {
+  .btn__menu {
+    display: block;
+  }
+}
+
 .menu__links {
   width: 100%;
   height: 100%;
@@ -421,11 +432,37 @@ h2 {
   flex-direction: column;
   align-items: center;
 }
+
+.menu__link {
+  color: #1a202c;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 8px 0;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.menu__link--primary {
+  color: #f7fafc;
+  padding: 12px 32px;
+  background: #6415ff;
+  border-radius: 500px;
+  border: none;
+}
+
 .menu--open .menu {
   visibility: visible;
   opacity: 1;
   transform: translateX(0);
 }
+
+.btn__menu--close {
+  position: fixed;
+  top: 24px;
+  right: 18px;
+}
+
 .menu {
   position: fixed;
   top: 0;
@@ -569,8 +606,10 @@ h2 {
 .values__description {
   padding: 32px 64px 32px 0;
 }
+
+/*list*/
+
 .values__list {
-  /*list*/
   margin-left: 0px;
   margin-right: 0px;
   display: flex;
@@ -635,11 +674,18 @@ h2 {
 #values .btn {
   margin-top: 48px;
 }
-
-@media (max-width: 1024px) {
-  .btn__menu {
-    display: block;
+@media (max-width: 640px) {
+  .btn {
+    line-height: 1.5;
   }
+}
+
+.btn__menu--svg:hover {
+  filter: invert(26%) sepia(94%) saturate(7476%) hue-rotate(261deg)
+    brightness(94%) contrast(115%);
+}
+.btn:hover {
+  background-color: rgb(28, 7, 69);
 }
 
 .btn__menu {
@@ -648,10 +694,22 @@ h2 {
   display: none;
   transition: all 300ms ease;
 }
-.btn__meun--close {
-  position: fixed;
-  top: 24px;
-  right: 18px;
+
+.button {
+  cursor: pointer;
+  border: none;
+}
+
+.btn {
+  background-color: #6415ff;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 500px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  transition: all 300ms ease;
+  cursor: pointer;
 }
 
 /* Values End */
@@ -664,7 +722,7 @@ h2 {
   flex-direction: row;
   width: 100%;
   justify-content: center;
-  gap: 24px;  /* adjust this value to control spacing */
+  gap: 24px; /* adjust this value to control spacing */
 }
 
 .plan {
@@ -808,10 +866,6 @@ h2 {
   .plan__bottom {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-}
-@media (max-width: 1280px) {
-  .plan__button {
     max-width: none;
   }
 }
@@ -879,7 +933,9 @@ h2 {
 
 /* Testimonials*/
 
-section {padding: 0 32px;}
+section {
+  padding: 0 32px;
+}
 #testimonials .container {
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -902,7 +958,8 @@ section {padding: 0 32px;}
   }
 }
 
-.testimonials__img,  .testimonials__description {
+.testimonials__img,
+.testimonials__description {
   width: 50%;
 }
 
@@ -917,7 +974,6 @@ section {padding: 0 32px;}
   flex-direction: column;
   padding-left: 64px;
 }
-
 
 #testimonials .section__title {
   margin-bottom: 24px;
@@ -1087,11 +1143,6 @@ button {
   }
 }
 
-@media (max-width: 1024px) {
-  .start__row {
-    flex-direction: column;
-  }
-}
 .start__row {
   width: 100%;
   margin: 0 auto;
@@ -1262,4 +1313,14 @@ footer {
 .footer__social--link svg {
   height: 16px;
   width: 16px;
+}
+
+@media (max-width: 1024px) {
+  .nav__links {
+    display: none;
+  }
+}
+
+.btn__menu {
+  display: block;
 }
